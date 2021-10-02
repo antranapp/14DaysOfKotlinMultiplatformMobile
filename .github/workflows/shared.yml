@@ -1,0 +1,37 @@
+name: Shared
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "*.png"
+      - docs
+      - ios
+      - app
+
+concurrency: 
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    runs-on: macos-11
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-java@v2
+        with:
+          distribution: "adopt"
+          java-version: "11"
+
+      - name: Build
+        run: ./gradlew :shared:build
+
+
+
