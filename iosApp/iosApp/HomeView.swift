@@ -35,13 +35,14 @@ struct HomeView: View {
 final class HomeViewModel: ObservableObject {
     @Published var count: Int = 0
 
+    private var counter = Counter()
+
     func increase() {
-        count += 1
+        count = Int(counter.increase())
     }
 
     func decrease() {
-        guard count > 0 else { return }
-        count -= 1
+        count = Int(counter.decrease())
     }
 }
 

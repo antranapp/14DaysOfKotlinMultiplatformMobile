@@ -23,15 +23,15 @@ kotlin {
         summary = "A shared module for iOS and Android apps"
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "14.1"
-        frameworkName = "shared"
+        framework {
+            baseName = "shared"
+        }
         podfile = project.file("../iosApp/Podfile")
     }
     
     sourceSets {
         val commonMain by getting {
-            dependencies {
-                implementation("dev.gitlive:firebase-firestore:1.3.1")
-            }
+            dependencies {}
         }
         val commonTest by getting {
             dependencies {

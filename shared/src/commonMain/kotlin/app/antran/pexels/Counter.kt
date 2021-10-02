@@ -1,13 +1,16 @@
 package app.antran.pexels
 
 class Counter {
-    var counter: Int = 0
+    var value: Int = 0
 
-    fun increase() {
-        counter += 1
+    fun increase(): Int {
+        value += 1
+        return value
     }
 
-    fun decrease() {
-        counter -= 1
+    fun decrease(): Int {
+        if (value == 0) return value
+        value -= 1
+        return value
     }
 }

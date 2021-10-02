@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import app.antran.pexels.Counter
 import app.antran.pexels.Greeting
 
 fun greet(): String {
@@ -61,18 +62,14 @@ class HomeViewModel: ViewModel() {
     private var _count = MutableLiveData<Int>(0)
     var count: LiveData<Int> = _count
 
+    var counter = Counter()
+
     fun increase() {
-        _count.value?.let { a ->
-            _count.value = a + 1
-        }
+        _count.value = counter.increase()
     }
 
     fun decrease() {
-        _count.value?.let { a ->
-            if (a > 0) {
-                _count.value = a - 1
-            }
-        }
+        _count.value = counter.decrease()
     }
 }
 
