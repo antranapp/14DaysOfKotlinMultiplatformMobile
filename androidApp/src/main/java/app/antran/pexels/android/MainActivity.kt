@@ -13,11 +13,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import app.antran.pexels.Counter
 import app.antran.pexels.Greeting
+import app.antran.pexels.CounterViewModel
 
 fun greet(): String {
     return Greeting().greeting()
@@ -60,18 +59,25 @@ fun HomeScreen(viewModel: HomeViewModel = HomeViewModel()) {
 
 class HomeViewModel: ViewModel() {
     private var _count = MutableLiveData<Int>(0)
-    var count: LiveData<Int> = _count
+    var count: androidx.lifecycle.LiveData<Int> = _count
 
-    var counter = Counter()
+    var _homeViewModel = CounterViewModel()
+
+    init {
+        _homeViewModel.count.addObserver { value ->
+            _count.value = value
+        }
+    }
 
     fun increase() {
-        _count.value = counter.increase()
+        _homeViewModel.increase()
     }
 
     fun decrease() {
-        _count.value = counter.decrease()
+        _homeViewModel.decrease()
     }
 }
+
 
 @Composable
 @Preview

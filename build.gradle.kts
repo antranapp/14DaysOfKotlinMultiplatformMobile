@@ -15,6 +15,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://dl.bintray.com/icerockdev/moko") }
     }
 }
 

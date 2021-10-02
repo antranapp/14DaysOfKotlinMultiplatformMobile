@@ -14,6 +14,8 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.0.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-beta01")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.2")
+
+    implementation("dev.icerock.moko:mvvm:0.11.0")
 }
 
 android {

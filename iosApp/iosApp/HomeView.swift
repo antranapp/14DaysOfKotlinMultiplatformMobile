@@ -33,16 +33,23 @@ struct HomeView: View {
 }
 
 final class HomeViewModel: ObservableObject {
+    private let _homeViewModel = shared.CounterViewModel()
+
     @Published var count: Int = 0
 
-    private var counter = Counter()
+    init() {
+        _homeViewModel.count.addObserver { [weak self] value in
+            guard let value = value else { return }
+            self?.count = Int(truncating: value)
+        }
+    }
 
     func increase() {
-        count = Int(counter.increase())
+        _homeViewModel.increase()
     }
 
     func decrease() {
-        count = Int(counter.decrease())
+        _homeViewModel.decrease()
     }
 }
 
