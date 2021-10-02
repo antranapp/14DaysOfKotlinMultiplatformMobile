@@ -11,7 +11,9 @@ dependencies {
     implementation("androidx.compose.material:material:1.0.2")
     implementation("androidx.compose.animation:animation:1.0.2")
     implementation("androidx.compose.ui:ui-tooling:1.0.2")
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-beta01")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.2")
 }
 
 android {
