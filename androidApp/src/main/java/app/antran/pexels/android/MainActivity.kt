@@ -15,8 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import app.antran.pexels.Greeting
 import app.antran.pexels.CounterViewModel
+import app.antran.pexels.GitHubRepository
+import kotlinx.coroutines.launch
 
 fun greet(): String {
     return Greeting().greeting()
@@ -61,11 +64,17 @@ class HomeViewModel: ViewModel() {
     private var _count = MutableLiveData<Int>(0)
     var count: androidx.lifecycle.LiveData<Int> = _count
 
-    var _homeViewModel = CounterViewModel()
+    private var _homeViewModel = CounterViewModel()
+
+    private var gitHubRepostiroy = GitHubRepository()
 
     init {
         _homeViewModel.count.addObserver { value ->
             _count.value = value
+        }
+
+        viewModelScope.launch {
+            gitHubRepostiroy.fetchRepos()
         }
     }
 
