@@ -24,11 +24,7 @@ class GitHubRepository {
     }
 
     suspend fun fetchRepos(): List<GitHubRepo> {
-        Logger.DEFAULT.log("getGitHubRepoList - ")
-        //val url = "https://api.github.com/search/repositories?q=language:kotlin+sort:stars"
         val url = "https://api.github.com/users/antranapp/repos"
-        val response = client.get<List<GitHubRepo>>(url)
-        Logger.DEFAULT.log("getGitHubRepoList - $response")
-        return  response
+        return client.get<List<GitHubRepo>>(url)
     }
 }
