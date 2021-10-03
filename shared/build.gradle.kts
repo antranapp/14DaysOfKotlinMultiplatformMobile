@@ -3,10 +3,13 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
+    id("kotlinx-serialization") version "1.5.31"
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.5.31"
 }
 
 val ktor_version = "1.6.4"
+val kotlinxSerializationCore_version = "1.3.0"
 
 version = "1.0"
 
@@ -35,6 +38,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("dev.icerock.moko:mvvm:0.11.0")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationCore_version")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationCore_version")
 
                 implementation("io.ktor:ktor-client-core:$ktor_version")
                 implementation("io.ktor:ktor-client-json:$ktor_version")
