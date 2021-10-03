@@ -12,6 +12,15 @@
 		7555FF83242A565900829871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* HomeView.swift */; };
 		D7B79B7D270962BC00507AA9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B7C270962BC00507AA9 /* CounterView.swift */; };
 		D7B79B7F270962CA00507AA9 /* GitHubRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */; };
+		D7B79B83270A5C5400507AA9 /* GitHubRepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */; };
+		D7B79B8A270A5CEA00507AA9 /* RemoteImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B88270A5CEA00507AA9 /* RemoteImageContainer.swift */; };
+		D7B79B8B270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */; };
+		D7B79B95270A5D5F00507AA9 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B90270A5D5F00507AA9 /* License.swift */; };
+		D7B79B96270A5D5F00507AA9 /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B91270A5D5F00507AA9 /* RepositoryList.swift */; };
+		D7B79B97270A5D5F00507AA9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B92270A5D5F00507AA9 /* Repository.swift */; };
+		D7B79B98270A5D5F00507AA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B93270A5D5F00507AA9 /* User.swift */; };
+		D7B79B99270A5D5F00507AA9 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B94270A5D5F00507AA9 /* Owner.swift */; };
+		D7B79B9B270A617500507AA9 /* GitHubRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		7DB7A841DCA6D122C2C1FA34 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B79B7C270962BC00507AA9 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryView.swift; sourceTree = "<group>"; };
+		D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryRowView.swift; sourceTree = "<group>"; };
+		D7B79B88270A5CEA00507AA9 /* RemoteImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageContainer.swift; sourceTree = "<group>"; };
+		D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageContainerViewModel.swift; sourceTree = "<group>"; };
+		D7B79B90270A5D5F00507AA9 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		D7B79B91270A5D5F00507AA9 /* RepositoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
+		D7B79B92270A5D5F00507AA9 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D7B79B93270A5D5F00507AA9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7B79B94270A5D5F00507AA9 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +77,9 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				D7B79B7C270962BC00507AA9 /* CounterView.swift */,
-				7555FF82242A565900829871 /* HomeView.swift */,
+				D7B79B81270A5C3B00507AA9 /* Features */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
-				D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -75,6 +91,65 @@
 				47FDE2A944AF6EC4B24FE24C /* Pods-iosApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7B79B80270A5C2E00507AA9 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B85270A5C9100507AA9 /* Models */,
+				D7B79B84270A5C8600507AA9 /* Views */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		D7B79B81270A5C3B00507AA9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B86270A5CD100507AA9 /* Utils */,
+				D7B79B7C270962BC00507AA9 /* CounterView.swift */,
+				7555FF82242A565900829871 /* HomeView.swift */,
+				D7B79B80270A5C2E00507AA9 /* GitHub */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D7B79B84270A5C8600507AA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */,
+				D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */,
+				D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7B79B85270A5C9100507AA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B90270A5D5F00507AA9 /* License.swift */,
+				D7B79B94270A5D5F00507AA9 /* Owner.swift */,
+				D7B79B92270A5D5F00507AA9 /* Repository.swift */,
+				D7B79B91270A5D5F00507AA9 /* RepositoryList.swift */,
+				D7B79B93270A5D5F00507AA9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7B79B86270A5CD100507AA9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B87270A5CEA00507AA9 /* RemoteImageLoading */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D7B79B87270A5CEA00507AA9 /* RemoteImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B88270A5CEA00507AA9 /* RemoteImageContainer.swift */,
+				D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */,
+			);
+			path = RemoteImageLoading;
 			sourceTree = "<group>";
 		};
 		E2B9E0EB8546E96D5E2BC200 /* Frameworks */ = {
@@ -179,10 +254,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B79B83270A5C5400507AA9 /* GitHubRepositoryRowView.swift in Sources */,
+				D7B79B99270A5D5F00507AA9 /* Owner.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* HomeView.swift in Sources */,
+				D7B79B95270A5D5F00507AA9 /* License.swift in Sources */,
+				D7B79B8A270A5CEA00507AA9 /* RemoteImageContainer.swift in Sources */,
+				D7B79B9B270A617500507AA9 /* GitHubRepositoryViewModel.swift in Sources */,
 				D7B79B7D270962BC00507AA9 /* CounterView.swift in Sources */,
+				D7B79B96270A5D5F00507AA9 /* RepositoryList.swift in Sources */,
+				D7B79B97270A5D5F00507AA9 /* Repository.swift in Sources */,
 				D7B79B7F270962CA00507AA9 /* GitHubRepositoryView.swift in Sources */,
+				D7B79B8B270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift in Sources */,
+				D7B79B98270A5D5F00507AA9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
