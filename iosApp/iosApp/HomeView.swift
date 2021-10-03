@@ -8,6 +8,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Text(greet)
+
             HStack {
                 Button(
                     action: viewModel.increase,
@@ -26,8 +27,14 @@ struct HomeView: View {
                     }
                 )
                 .padding()
-
             }
+
+            Button(
+                action: viewModel.fetchRepos,
+                label: {
+                    Text("Fetch GitHub Repositories")
+                }
+            )
         }
     }
 }
@@ -35,12 +42,18 @@ struct HomeView: View {
 final class HomeViewModel: ObservableObject {
     private let _homeViewModel = shared.CounterViewModel()
 
+    private let _githubViewModel = shared.GitHubViewModel()
+
     @Published var count: Int = 0
 
     init() {
         _homeViewModel.count.addObserver { [weak self] value in
             guard let value = value else { return }
             self?.count = Int(truncating: value)
+        }
+
+        _githubViewModel.repos.addObserver { [weak self] repos in
+            guard let repos = repos else { return }
         }
     }
 
@@ -50,6 +63,10 @@ final class HomeViewModel: ObservableObject {
 
     func decrease() {
         _homeViewModel.decrease()
+    }
+
+    func fetchRepos() {
+        _githubViewModel.fetchRepos()
     }
 }
 

@@ -19,6 +19,7 @@ import androidx.lifecycle.viewModelScope
 import app.antran.pexels.Greeting
 import app.antran.pexels.CounterViewModel
 import app.antran.pexels.GitHubRepository
+import app.antran.pexels.GitHubViewModel
 import kotlinx.coroutines.launch
 
 fun greet(): String {
@@ -57,6 +58,10 @@ fun HomeScreen(viewModel: HomeViewModel = HomeViewModel()) {
                 Text("-")
             }
         }
+
+        Button(onClick = { viewModel.fetchRepos() }) {
+            Text("Fetch GitHub Repository")
+        }
     }
 }
 
@@ -66,15 +71,11 @@ class HomeViewModel: ViewModel() {
 
     private var _homeViewModel = CounterViewModel()
 
-    private var gitHubRepostiroy = GitHubRepository()
+    private var _githubViewModel = GitHubViewModel()
 
     init {
         _homeViewModel.count.addObserver { value ->
             _count.value = value
-        }
-
-        viewModelScope.launch {
-            gitHubRepostiroy.fetchRepos()
         }
     }
 
@@ -84,6 +85,10 @@ class HomeViewModel: ViewModel() {
 
     fun decrease() {
         _homeViewModel.decrease()
+    }
+
+    fun fetchRepos() {
+        _githubViewModel.fetchRepos()
     }
 }
 
