@@ -31,72 +31,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-                HomeScreen()
+                HomeView()
             }
         }
-    }
-}
-
-@Composable
-fun HomeScreen(viewModel: HomeViewModel = HomeViewModel()) {
-
-    val count by viewModel.count.observeAsState(0)
-
-    Column(
-        Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = greet())
-
-        Row() {
-            Button(onClick = { viewModel.increase() }) {
-                Text("+")
-            }
-            Text(text = "Count: ${count}", modifier = Modifier.padding(8.dp))
-            Button(onClick = { viewModel.decrease() }) {
-                Text("-")
-            }
-        }
-
-        Button(onClick = { viewModel.fetchRepos() }) {
-            Text("Fetch GitHub Repository")
-        }
-    }
-}
-
-class HomeViewModel: ViewModel() {
-    private var _count = MutableLiveData<Int>(0)
-    var count: androidx.lifecycle.LiveData<Int> = _count
-
-    private var _homeViewModel = CounterViewModel()
-
-    private var _githubViewModel = GitHubViewModel()
-
-    init {
-        _homeViewModel.count.addObserver { value ->
-            _count.value = value
-        }
-    }
-
-    fun increase() {
-        _homeViewModel.increase()
-    }
-
-    fun decrease() {
-        _homeViewModel.decrease()
-    }
-
-    fun fetchRepos() {
-        _githubViewModel.fetchRepos()
-    }
-}
-
-
-@Composable
-@Preview
-fun PreviewHomeScreen() {
-    MaterialTheme {
-        HomeScreen()
     }
 }
