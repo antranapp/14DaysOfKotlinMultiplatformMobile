@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KMM</string>
+    <string name="counter_route">Counter</string>
+    <string name="github_route">Github</string>
+</resources>
