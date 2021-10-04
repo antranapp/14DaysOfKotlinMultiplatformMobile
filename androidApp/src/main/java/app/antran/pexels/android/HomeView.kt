@@ -21,6 +21,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.material.Icon
+import app.antran.pexels.android.github.GitHubRepositoryView
 
 @Composable
 fun HomeView() {
@@ -46,7 +47,7 @@ private fun HomeNavigationConfigurations(
 ) {
     NavHost(
         navController,
-        startDestination = BottomNavigationScreens.Counter.route
+        startDestination = BottomNavigationScreens.GitHub.route
     ) {
         composable(BottomNavigationScreens.Counter.route) {
             CounterView()

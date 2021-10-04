@@ -19,6 +19,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.2")
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
     implementation("dev.icerock.moko:mvvm:0.11.0")
+    implementation("com.github.skydoves:landscapist-coil:1.3.7")
+
 }
 
 android {
