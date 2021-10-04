@@ -9,7 +9,7 @@
 import SwiftUI
 import shared
 
-struct GitHubRepositoryView: View {
+struct GitHubRepositoryListView: View {
     @StateObject private var viewModel = GitHubRepositoryViewModel()
 
     var body: some View {
@@ -22,7 +22,9 @@ struct GitHubRepositoryView: View {
                 }
 
                 ForEach(viewModel.repos, id: \.id) { repo in
-                    GitHubRepositoryRowView(repository: repo)
+                    NavigationLink(destination: GitHubRepositoryDetailView(repository: repo)) {
+                        GitHubRepositoryRowView(repository: repo)
+                    }
                 }
             }
             .navigationBarTitle("GitHub Repositories")
@@ -34,7 +36,7 @@ struct GitHubRepositoryView: View {
 
 struct GitHubRepositoryView_Previews: PreviewProvider {
     static var previews: some View {
-        GitHubRepositoryView()
+        GitHubRepositoryListView()
     }
 }
 

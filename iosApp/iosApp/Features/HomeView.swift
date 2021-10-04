@@ -10,7 +10,7 @@ struct HomeView: View {
                     Text("Home")
                 }
 
-            GitHubRepositoryView()
+            GitHubRepositoryListView()
                 .tabItem {
                     Image(systemName: "bookmark.circle.fill")
                     Text("Bookmark")

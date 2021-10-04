@@ -72,17 +72,13 @@ data class GitHubRepo(
     val updated_at: String,
     val url: String,
     val watchers: Int,
-    val watchers_count: Int
+    val watchers_count: Int,
+    val license: License?,
+    val description: String?
 ) {
-    @Transient
-    val license: License? = null
-
-
     @Transient
     val homepage: String? = null
 
-    @Transient
-    val description: String? = null
     @Transient
     val language: String? = null
 }

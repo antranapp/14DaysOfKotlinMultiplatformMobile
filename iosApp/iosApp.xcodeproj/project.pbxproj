@@ -11,7 +11,7 @@
 		2E6ECCC81A0CD0A771D4DF20 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB7A841DCA6D122C2C1FA34 /* Pods_iosApp.framework */; };
 		7555FF83242A565900829871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* HomeView.swift */; };
 		D7B79B7D270962BC00507AA9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B7C270962BC00507AA9 /* CounterView.swift */; };
-		D7B79B7F270962CA00507AA9 /* GitHubRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */; };
+		D7B79B7F270962CA00507AA9 /* GitHubRepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B7E270962CA00507AA9 /* GitHubRepositoryListView.swift */; };
 		D7B79B83270A5C5400507AA9 /* GitHubRepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */; };
 		D7B79B8A270A5CEA00507AA9 /* RemoteImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B88270A5CEA00507AA9 /* RemoteImageContainer.swift */; };
 		D7B79B8B270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */; };
@@ -21,6 +21,7 @@
 		D7B79B98270A5D5F00507AA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B93270A5D5F00507AA9 /* User.swift */; };
 		D7B79B99270A5D5F00507AA9 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B94270A5D5F00507AA9 /* Owner.swift */; };
 		D7B79B9B270A617500507AA9 /* GitHubRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */; };
+		D7CF5A4B270BB9D400D25A77 /* GitHubRepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF5A4A270BB9D400D25A77 /* GitHubRepositoryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,7 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DB7A841DCA6D122C2C1FA34 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B79B7C270962BC00507AA9 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryView.swift; sourceTree = "<group>"; };
+		D7B79B7E270962CA00507AA9 /* GitHubRepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryListView.swift; sourceTree = "<group>"; };
 		D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryRowView.swift; sourceTree = "<group>"; };
 		D7B79B88270A5CEA00507AA9 /* RemoteImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageContainer.swift; sourceTree = "<group>"; };
 		D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageContainerViewModel.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		D7B79B93270A5D5F00507AA9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7B79B94270A5D5F00507AA9 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryViewModel.swift; sourceTree = "<group>"; };
+		D7CF5A4A270BB9D400D25A77 /* GitHubRepositoryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +118,8 @@
 		D7B79B84270A5C8600507AA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D7B79B7E270962CA00507AA9 /* GitHubRepositoryView.swift */,
-				D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */,
-				D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */,
+				D7CF5A48270BB9AF00D25A77 /* Detail */,
+				D7CF5A47270BB9A300D25A77 /* List */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +151,32 @@
 				D7B79B89270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift */,
 			);
 			path = RemoteImageLoading;
+			sourceTree = "<group>";
+		};
+		D7CF5A47270BB9A300D25A77 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D7B79B7E270962CA00507AA9 /* GitHubRepositoryListView.swift */,
+				D7B79B82270A5C5400507AA9 /* GitHubRepositoryRowView.swift */,
+				D7B79B9A270A617500507AA9 /* GitHubRepositoryViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D7CF5A48270BB9AF00D25A77 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D7CF5A49270BB9D400D25A77 /* Detail */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		D7CF5A49270BB9D400D25A77 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D7CF5A4A270BB9D400D25A77 /* GitHubRepositoryDetailView.swift */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		E2B9E0EB8546E96D5E2BC200 /* Frameworks */ = {
@@ -255,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B79B83270A5C5400507AA9 /* GitHubRepositoryRowView.swift in Sources */,
+				D7CF5A4B270BB9D400D25A77 /* GitHubRepositoryDetailView.swift in Sources */,
 				D7B79B99270A5D5F00507AA9 /* Owner.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* HomeView.swift in Sources */,
@@ -264,7 +292,7 @@
 				D7B79B7D270962BC00507AA9 /* CounterView.swift in Sources */,
 				D7B79B96270A5D5F00507AA9 /* RepositoryList.swift in Sources */,
 				D7B79B97270A5D5F00507AA9 /* Repository.swift in Sources */,
-				D7B79B7F270962CA00507AA9 /* GitHubRepositoryView.swift in Sources */,
+				D7B79B7F270962CA00507AA9 /* GitHubRepositoryListView.swift in Sources */,
 				D7B79B8B270A5CEA00507AA9 /* RemoteImageContainerViewModel.swift in Sources */,
 				D7B79B98270A5D5F00507AA9 /* User.swift in Sources */,
 			);
