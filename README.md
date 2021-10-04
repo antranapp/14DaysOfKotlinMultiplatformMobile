@@ -1,67 +1,15 @@
 # 14 Days of Kotlin Multiplatform Mobile
 
-## Day 0
+# What's this?
 
-- Setting up the development environment
+- Very simple project to show how to share business logic between iOS and Android Apps using Kotlin Multiplatform Mobile (KMM)
+- The idea is to keep it simple and stupid so that people can follow and understand the idea behind KMM.
+- Check out each commit to see how the project is developed: https://github.com/antranapp/14DaysOfKotlinMultiplatformMobile/commits/master
 
-## Day 1
+# Demo
 
-- Create a Hello World application from Kotlin Multiplatform Mobile template
+https://user-images.githubusercontent.com/478757/135779905-f44510df-4280-49c4-97ee-d22c33ae9356.mp4
 
-## Day 2
+# License
 
-- Convert Android app to Compose.
-- Create a coutner app.
-
-## Day 3
-
-- Prepare UI for Android and iOS apps.
-
-## Day 4
-
-- Create ViewModel for Android and iOS apps.
-
-## Day 5
-
-- Create shared Services/UseCases to provide content for Android and iOS apps.
-
-## Day 6
-
-- Create repository to provide data for services.
-
-## Day 7
-
-- Add Network layer.
-
-## Day 8
-
-- Refactor to share ViewModel.
-
-## Day 9
-
-- Setup Github Action.
-
-## Day 10 
-
-- Write unit tests for shared module.
-
-## Day 11
-
-- Write UI tests for Android and iOS apps.
-
-## Day 12
-
-- Create fastlane pipeline to deliver the app.
-
-## Day 13
-
-- Prepare for release, meta data, screenshots.
-
-## Day 14
-
-- Upload final builds, submit for review.
-
-## Future
-
-- Release 🚀
-- Enjoy 🎉
+MIT
