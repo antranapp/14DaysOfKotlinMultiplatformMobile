@@ -21,7 +21,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.material.Icon
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
+import app.antran.pexels.GitHubRepo
+import app.antran.pexels.android.github.GitHubRepositoryDetailView
 import app.antran.pexels.android.github.GitHubRepositoryView
+import app.antran.pexels.android.github.GitHubRepositoryViewModel
 
 @Composable
 fun HomeView() {
@@ -47,13 +52,24 @@ private fun HomeNavigationConfigurations(
 ) {
     NavHost(
         navController,
-        startDestination = BottomNavigationScreens.GitHub.route
+        startDestination = BottomNavigationScreens.Counter.route
     ) {
         composable(BottomNavigationScreens.Counter.route) {
             CounterView()
         }
         composable(BottomNavigationScreens.GitHub.route) {
-            GitHubRepositoryView()
+            GitHubRepositoryView(GitHubRepositoryViewModel(), navController)
+        }
+        composable(
+            "detail/{repo}",
+            arguments = listOf(
+                navArgument("repo") {
+                    type = NavType.StringType
+                }
+            )
+        ) {
+            val repo = it.arguments?.getString("repo")
+            GitHubRepositoryDetailView(repo ?: "")
         }
     }
 }

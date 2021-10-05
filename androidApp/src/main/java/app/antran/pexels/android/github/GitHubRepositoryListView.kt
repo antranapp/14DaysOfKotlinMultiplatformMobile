@@ -1,5 +1,6 @@
 package app.antran.pexels.android.github
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavHostController
 import app.antran.pexels.CounterViewModel
 import app.antran.pexels.GitHubRepo
 import app.antran.pexels.GitHubViewModel
@@ -31,7 +33,7 @@ import com.skydoves.landscapist.coil.CoilImage
 import kotlinx.coroutines.NonDisposableHandle.parent
 
 @Composable
-fun GitHubRepositoryView(viewModel: GitHubRepositoryViewModel = GitHubRepositoryViewModel()) {
+fun GitHubRepositoryView(viewModel: GitHubRepositoryViewModel = GitHubRepositoryViewModel(), navController: NavHostController) {
 
     val scrollState = rememberScrollState()
     val repos by viewModel.repos.observeAsState(listOf())
@@ -44,24 +46,28 @@ fun GitHubRepositoryView(viewModel: GitHubRepositoryViewModel = GitHubRepository
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        GitHubRepositoryList(repos = repos)
+        GitHubRepositoryList(repos = repos, navController)
     }
 }
 
 @Composable
-fun GitHubRepositoryList(repos: List<GitHubRepo>?) {
+fun GitHubRepositoryList(repos: List<GitHubRepo>?, navController: NavHostController) {
     Column {
         repos!!.forEach { repo ->
-            GitHubRepositoryRow(repo)
+            GitHubRepositoryRow(repo, navController)
         }
     }
 }
 
 @Composable
-fun GitHubRepositoryRow(repo: GitHubRepo) {
+fun GitHubRepositoryRow(repo: GitHubRepo, navController: NavHostController) {
     Row(
+        Modifier
+            .clickable {
+                navController.navigate("detail/".plus(repo.name))
+            },
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Start
+        horizontalArrangement = Arrangement.Start,
     ) {
         CoilImage(
             imageModel = repo.owner.avatar_url,
@@ -100,10 +106,10 @@ class GitHubRepositoryViewModel: ViewModel() {
 
 
 
-@Composable
-@Preview
-fun PreviewGitHubRepositoryView() {
-    MaterialTheme {
-        GitHubRepositoryView()
-    }
-}
+//@Composable
+//@Preview
+//fun PreviewGitHubRepositoryView() {
+//    MaterialTheme {
+//        GitHubRepositoryView()
+//    }
+//}
