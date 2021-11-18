@@ -9,7 +9,7 @@ plugins {
 }
 
 val ktor_version = "1.6.5"
-val kotlinxSerializationCore_version = "1.3.0"
+val kotlinxSerializationCore_version = "1.3.1"
 
 version = "1.0"
 
