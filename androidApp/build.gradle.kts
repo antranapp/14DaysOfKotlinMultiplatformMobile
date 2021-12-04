@@ -19,7 +19,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
     implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
     implementation("dev.icerock.moko:mvvm:0.11.0")
-    implementation("com.github.skydoves:landscapist-coil:1.4.3")
+    implementation("com.github.skydoves:landscapist-coil:1.4.4")
 
 }
 
