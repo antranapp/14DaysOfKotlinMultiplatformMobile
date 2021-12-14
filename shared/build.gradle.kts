@@ -5,7 +5,7 @@ plugins {
     kotlin("native.cocoapods")
     id("kotlinx-serialization") version "1.5.31"
     id("com.android.library")
-    kotlin("plugin.serialization") version "1.6.0"
+    kotlin("plugin.serialization") version "1.6.10"
 }
 
 val ktor_version = "1.6.5"
