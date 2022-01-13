@@ -8,7 +8,7 @@ val compose_version = "1.0.3"
 dependencies {
     implementation(project(":shared"))
     implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.compose.material:material:$compose_version")
     implementation("androidx.compose.animation:animation:$compose_version")
