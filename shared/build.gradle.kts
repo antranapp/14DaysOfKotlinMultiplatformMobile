@@ -8,7 +8,7 @@ plugins {
     kotlin("plugin.serialization") version "1.6.10"
 }
 
-val ktor_version = "1.6.5"
+val ktor_version = "1.6.7"
 val kotlinxSerializationCore_version = "1.3.1"
 
 version = "1.0"
